@@ -1,0 +1,10 @@
+streamlit
+numpy
+matplotlib
+pandas
+Pillow
+plotly
+stable-baselines3
+gymnasium
+pygame
+opencv-python-headless
