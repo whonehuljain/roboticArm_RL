@@ -4,7 +4,7 @@ matplotlib
 pandas
 Pillow
 plotly
-stable-baselines3
+stable-baselines3>=2.0.0
 gymnasium
 pygame
 opencv-python-headless

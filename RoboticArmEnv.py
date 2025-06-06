@@ -3,8 +3,7 @@ import numpy as np
 from stable_baselines3 import PPO
 import gymnasium as gym
 from gymnasium import spaces
-import pygame.surfarray as surfarray
-from gym.wrappers import TimeLimit
+from gymnasium.wrappers import TimeLimit
 
 class RoboticArmEnv(gym.Env):
     metadata = {'render.modes': ['human']}
@@ -133,6 +132,9 @@ class RoboticArmEnv(gym.Env):
         if mode != 'human':
             raise NotImplementedError("Only human mode is supported.")
 
+        if not hasattr(self, '_pygame_initialized'):
+            pygame.init()
+            self._pygame_initialized = True
         # Initialize a hidden surface to draw on
         width, height = 600, 600
         surface = pygame.Surface((width, height))
