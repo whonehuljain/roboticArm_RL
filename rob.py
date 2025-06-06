@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 
 # import streamlit as st
 from stable_baselines3 import PPO
-from gym.wrappers import TimeLimit
+from gymnasium.wrappers import TimeLimit
 import cv2
 import RoboticArmEnv as RoboticArmEnv
 
