@@ -686,7 +686,7 @@ timed_env.close()
         #     chart_placeholder.plotly_chart(fig, use_container_width=True)
         #     time.sleep(0.05)
 
-        model_path = "rob_arm_PPO34"
+        model_path = "trained_models/rob_arm_PPO"
         model = PPO.load(model_path)
         env = RoboticArmEnv.RoboticArmEnv()
         timed_env = TimeLimit(env, max_episode_steps=200)
