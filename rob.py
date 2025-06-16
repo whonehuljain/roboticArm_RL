@@ -239,6 +239,29 @@ def main():
 def show_overview():
     st.markdown('<h1 class="main-header">🤖 Robotic Arm Stand Project</h1>', unsafe_allow_html=True)
     
+    st.markdown("""
+    <div class="highlight-box">
+    <h3>🎯 Project Mission</h3>
+    <p>Train a machine learning model to control a simulated robotic arm, making it stand upright at 90° and maintain perfect stability using reinforcement learning algorithms.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Key achievements with actual data
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("🎯 Target Angle", "90°", "Perfect Upright")
+    
+    with col2:
+        st.metric("🎯 Final Performance", "-336 avg reward", "Stable")
+    
+    with col3:
+        st.metric("🤖 Algorithm Used", "PPO", "Optimal Choice")
+    
+    with col4:
+        st.metric("⚡ Training Steps", "105K", "Converged")
+
+
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         # Create a simple robotic arm visualization
@@ -289,28 +312,6 @@ def show_overview():
         )
         
         st.plotly_chart(fig_overview, use_container_width=True)
-    
-    st.markdown("""
-    <div class="highlight-box">
-    <h3>🎯 Project Mission</h3>
-    <p>Train a machine learning model to control a simulated robotic arm, making it stand upright at 90° and maintain perfect stability using reinforcement learning algorithms.</p>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Key achievements with actual data
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        st.metric("🎯 Target Angle", "90°", "Perfect Upright")
-    
-    with col2:
-        st.metric("🎯 Final Performance", "-336 avg reward", "Stable")
-    
-    with col3:
-        st.metric("🤖 Algorithm Used", "PPO", "Optimal Choice")
-    
-    with col4:
-        st.metric("⚡ Training Steps", "105K", "Converged")
 
 def show_problem_statement():
     st.markdown('<h1 class="main-header">🎯 The Challenge</h1>', unsafe_allow_html=True)
